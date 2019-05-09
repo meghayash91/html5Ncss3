@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Form example</title>
+        <style>
+            /* br{
+                line-height: 30px;
+            } */
+            body{
+                max-width: 420px;
+                margin: auto;
+                border-style: solid;
+                border-width: 1px;
+                border-color: darkgray;
+                border-radius: 20px;
+            }
+        </style>
+        </head>
+        <body>
+            <form action="" method="POST">
+                <h1>Payment Form</h1>
+                Required fields are followed by <abbr title="required">*</abbr><br>
+                <h2>Contact Information</h2>
+                <fieldset style=" width:180px">
+                        <legend>Title</legend>
+                        <input type="radio" name="title" value="M">Mister <br>
+                        <input type="radio" name="title" value="Ms">Ms
+                    </fieldset>
+                <section style="text-align:right">
+                <br>
+                <label for="name">Name:<abbr title="required">*</abbr></label>
+                <input type="text" id="name" name="username">
+                <br>
+                <br>
+                <label for="email">E-mail:<abbr title="required">*</abbr></label>
+                <input type="text" id="email" name="useremail">
+                <br>
+                <br>
+                <label for="msg">Message:<abbr title="required">*</abbr></label>
+                <input type="text" id="msg">
+            </section>
+            <h2>Payment Information</h2>
+            <section style="text-align:center">
+                <label for="select">Card Type:</label>
+                <select id="select">
+                    <option value="1">Visa</option>
+                    <option value="2">Credit Card</option>
+                    <option value="3">Debit Card</option>
+                </select>
+                <br>
+                <br>
+                <label for="cnum">Card Number:<abbr title="Required">*</abbr></label>
+                <input type="text" id="cnum">
+                <br>
+                <br>
+                <label for="edate">Expiration Date</label>
+                <input type="date" id="edate"><br>
+                <cite>formatted as mm/yyyy</cite><br>
+                <br>
+                <button type="submit"><b>Validate</b> the payment</button><br>
+                <br>
+            </section>
+            <input type="submit" value="Validate the payment"><br>
+            <br>
+            </form>
+        </body>
