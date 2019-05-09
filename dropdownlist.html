@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dropdown List example</title>
+        <style>
+            input:invalid{
+                border: 2px dotted green;
+            }
+            input:valid{
+                border: 2px solid black;
+            }
+        </style>
+        </head>
+        <body>
+            <form>
+                <label for="fruit">What's your favourite fruit?</label>
+                <select multiple id="fruit">
+                    <option>Apple</option>
+                    <option>Banana</option>
+                    <option>Cherry</option>
+                </select><br>
+                <p>
+                <label for="group">select your favourite fruit:</label>
+                <input type="text" id="group" list="mysuggestion">
+                <datalist id="mysuggestion">
+                    <option>Apple</option>
+                    <option>Banana</option>
+                    <option>Mango</option>
+                    <option>Strawberry</option>
+                    <option>Watermelon</option>
+                    <option>Jackfruit</option>
+                    <option>Fig</option>
+                </datalist>
+            </p>
+            <label for="myfruit">What is your favourite fruit? (with fallback)</label>
+            <input type="text" id="myfruit" name="fruit" list="fruitlist">
+            <datalist id="fruitlist">
+                <label for="suggestion">or ppick a fruit</label>
+                <select id="suggestion" name="altfruit">
+                    <option>Apple</option>
+                    <option>Banana</option>
+                    <option>Mango</option>
+                    <option>Strawberry</option>
+                    <option>Watermelon</option>
+                    <option>Jackfruit</option>
+                    <option>Fig</option>
+                </select>
+            </datalist>
+            <p>
+                <label for="choose">Would you prefer Banana or Cherry?</label>
+                <input id="choose" name="i-like" required pattern="Banana|Cherry" minlength="6" maxlength="6">
+                <button>Submit</button>
+            </p>
+            </form>
+        </body>
